@@ -3,14 +3,14 @@ import axiosInstance from "./axiosInstance";
 
 // Login user
 export const loginUser = async (credentials) => {
-    const response = await axiosInstance.post("http://localhost:5000/api/auth/login", credentials);
+    const response = await axiosInstance.post("https://movie-webapp-production.up.railway.app/api/auth/login", credentials);
     return response.data;
 };
 
 
 // Register user
 export const registerUser = async (userData) => {
-    const response = await axiosInstance.post("http://localhost:5000/api/auth/register", userData);
+    const response = await axiosInstance.post("https://movie-webapp-production.up.railway.app/api/auth/register", userData);
     return response.data;
 };
 
