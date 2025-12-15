@@ -13,6 +13,10 @@ The frontend of the **Movie Web Application**, built using **React** and **Vite*
 - Environment-based API configuration
 - Deployed on **Vercel**
 
+- Admin login crential
+- Admin login Id-sandesh@gmail.com
+- Admin password-12345678
+
 ---
 
  Tech Stack
