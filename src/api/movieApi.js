@@ -3,35 +3,35 @@ import axiosInstance from "./axiosInstance";
 
 // Get all movies with pagination
 export const getMovies = async (page = 1, limit = 10) => {
-    const response = await axiosInstance.get(`https://movie-webapp-production.up.railway.app/api/movies?page=${page}&limit=${limit}`);
+    const response = await axiosInstance.get(`/api/movies?page=${page}&limit=${limit}`);
     return response.data;
 };
 
 
 // Get sorted movies
 export const getSortedMovies = async (sortBy, order = "asc") => {
-    const response = await axiosInstance.get(`https://movie-webapp-production.up.railway.app/api/movies/sorted?sortBy=${sortBy}&order=${order}`);
+    const response = await axiosInstance.get(`/api/movies/sorted?sortBy=${sortBy}&order=${order}`);
     return response.data;
 };
 
 
 // Search movies by name or description
 export const searchMovies = async (query) => {
-    const response = await axiosInstance.get(`https://movie-webapp-production.up.railway.app/api/movies/search?q=${query}`);
+    const response = await axiosInstance.get(`/api/movies/search?q=${query}`);
     return response.data;
 };
 
 
 // Get single movie details
 export const getMovieById = async (id) => {
-    const response = await axiosInstance.get(`https://movie-webapp-production.up.railway.app/api/movies/${id}`);
+    const response = await axiosInstance.get(`/api/movies/${id}`);
     return response.data;
 };
 
 
 // Admin: Add new movie
 export const addMovie = async (movieData) => {
-    const response = await axiosInstance.post("https://movie-webapp-production.up.railway.app/api/movies", movieData);
+    const response = await axiosInstance.post("/api/movies", movieData);
     return response.data;
 };
 
